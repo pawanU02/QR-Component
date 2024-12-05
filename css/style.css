@@ -1,0 +1,189 @@
+:root {
+    --slate-300: hsl(212, 45%, 89%);
+    --slate-500: hsl(216, 15%, 48%);
+    --slate-900: hsl(218, 44%, 22%);
+    --slate-neutral-100: hsl(0, 0%, 100%);
+
+    --ff-primary: "Outfit", sans-serif;
+
+    --ff-regular: var(--ff-primary);
+    --ff-bold: var(--ff-primary);
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    --fs-regular: 15px;
+    --fs-bold: 22px;
+
+    /*Padding Size*/
+    --ps-200: 16px;
+    --ps-300: 24px;
+    --ps-500: 40px;
+
+    /*Line Height and letter spacing*/
+    --line-height-140: 1.4;
+    --line-height-120: 1.2;
+    --letter-spacing-small: 0.013rem;
+
+    --fs-body: var(--fs-regular);
+    --fs-head: var(--fs-bold);
+
+    --border-radius-small: 10px;
+    --border-radius-medium: 20px;
+}
+
+/*CSS RESET*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Make sure text-areas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+*,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+}
+
+/*UTILITY CLASSES*/
+.text-color-regular {
+    color: var(--slate-500);
+}
+
+.text-color-heading {
+    color: var(--slate-900);
+}
+
+.bg-accent {
+    background-color: var(--slate-neutral-100);
+}
+
+/*Font Weights*/
+.fw-regular { font-weight: var(--fw-regular); }
+.fw-bold { font-weight: var(--fw-bold); }
+
+/*Font Sizes*/
+.fs-body { font-size: var(--fs-body); }
+.fs-heading { font-size: var(--fs-head); }
+
+/*Line Height*/
+.line-height-120 { line-height: var(--line-height-120); }
+.line-height-140 { line-height: var(--line-height-140); }
+
+
+body {
+    background-color: var(--slate-300);
+    font-family: var(--ff-primary), serif;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.card {
+    --max-width: 320px;
+    padding: var(--ps-200) var(--ps-200) var(--ps-500);
+    width: min(var(--max-width), 100%);
+    margin-inline: auto;
+    border-radius: var(--border-radius-medium);
+    overflow: hidden;
+}
+
+.card-header {
+    margin-bottom: var(--ps-300);
+}
+
+.qr {
+    border-radius: var(--border-radius-small);
+}
+
+.card-body {
+    padding: 0 var(--ps-200);
+}
+
+.primary-heading {
+    margin-bottom: var(--ps-200);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
